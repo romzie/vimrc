@@ -52,12 +52,14 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+" merge vim clipboard with system
+set clipboard=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+set scrolloff=7
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
@@ -78,6 +80,16 @@ endif
 
 "Always show current position
 set ruler
+
+" Show line number
+set number
+set relativenumber
+
+" Highlight a column
+set colorcolumn=120
+
+" Draw current line
+set cursorline
 
 " Height of the command bar
 set cmdheight=1
@@ -127,6 +139,10 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+set foldlevelstart=20
+
+" Vertical git diff
+set diffopt+=vertical
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -138,13 +154,6 @@ syntax enable
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
-
-try
-    colorscheme desert
-catch
-endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -169,6 +178,10 @@ set nobackup
 set nowb
 set noswapfile
 
+" Undo history between sessions
+set undofile
+set undodir=~/.vim/undodir
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -184,8 +197,11 @@ set shiftwidth=4
 set tabstop=4
 
 " Linebreak on 500 characters
-set lbr
+set linebreak
 set tw=500
+
+" Always try to show last paragraph line
+set display+=lastline
 
 set ai "Auto indent
 set si "Smart indent
