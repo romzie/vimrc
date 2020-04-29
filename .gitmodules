@@ -1,0 +1,21 @@
+[submodule "sources_non_forked/comfortable-motion.vim"]
+	path = sources_non_forked/comfortable-motion.vim
+	url = https://github.com/yuttie/comfortable-motion.vim
+[submodule "sources_non_forked/nerdtree-git-plugin"]
+	path = sources_non_forked/nerdtree-git-plugin
+	url = https://github.com/xuyuanp/nerdtree-git-plugin
+[submodule "sources_non_forked/quick-scope"]
+	path = sources_non_forked/quick-scope
+	url = https://github.com/unblevable/quick-scope
+[submodule "sources_non_forked/vim-indent-guides"]
+	path = sources_non_forked/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "sources_non_forked/vim-markdown-preview"]
+	path = sources_non_forked/vim-markdown-preview
+	url = https://github.com/jamshedvesuna/vim-markdown-preview
+[submodule "sources_non_forked/vim-pasta"]
+	path = sources_non_forked/vim-pasta
+	url = https://github.com/sickill/vim-pasta
+[submodule "sources_non_forked/youcompleteme"]
+	path = sources_non_forked/youcompleteme
+	url = https://github.com/valloric/youcompleteme
